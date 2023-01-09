@@ -7,7 +7,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+:root{
+  --slate: #8892b0
 }

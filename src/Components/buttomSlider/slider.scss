@@ -1,0 +1,72 @@
+@mixin text_style ($font-weight, $font-size, $line-height, $color) {
+    font-weight: $font-weight;
+    font-size: $font-size;
+    line-height: $line-height;
+    color: $color;
+    font-style: normal;
+}
+
+
+.sl_grp1{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 40px;
+    
+    .sl_header {
+        @include text_style(600, 16px, 20px, #FFFFFF);
+
+    
+    }
+
+    .sl_arrow2{
+        
+        
+         color: rgba(235, 235, 245, 0.6);
+    }
+}
+.sl_slider{
+    position: relative;
+    top: 30px;
+    min-height: 60vh;
+    overflow: hidden;
+    //background-color: rgba(67, 68, 60, 0.849);
+
+}
+.sl_flex{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    
+
+
+    
+}
+.items_flex{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    position: relative;
+    top: 50px;
+    
+    
+    .sl_img{
+    background: #2F2F2F;
+    border-radius: 6px;
+    width:204px ; //calc(100%/2 - 20px);
+    height: 274px;
+    }
+
+    .sl_text{
+        cursor: pointer;
+    @include text_style(600, 16px, 20px, #FFFFFF);  
+    }
+    .sl_text2{
+        @include text_style(600, 16px, 20px, rgba(235, 235, 245, 0.6));  
+        
+        }
+        .sl_price{
+            @include text_style(600, 16px, 20px, #FFFFFF); 
+        }   
+}

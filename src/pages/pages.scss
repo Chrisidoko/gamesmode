@@ -1,0 +1,31 @@
+.section{
+    position: relative;
+    left: 252px;
+    background-color: #141414;
+    min-height: 140vh; //min-height will let the body grow if necessary
+    width: calc(100% - 252px); // 100% of the parent element -252px
+    padding: 10px 48px 10px 14px; 
+    
+    
+  }
+
+  // page temporary styles
+
+  .pg_text{
+    font-weight:900;
+    font-size: 55px;
+    color: rgb(54, 53, 53);
+    position: absolute;
+    left: 40%;
+    top:30%
+    
+  }
+
+  @media only screen and (max-width: 1068px) {
+  .section{
+    position: relative;
+    left: 70px;
+    width: calc(100% - 70px);
+  }
+    }
+
