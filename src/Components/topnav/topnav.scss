@@ -16,6 +16,7 @@
     }
 }
 
+// Elememnt on the left
 .nav_row{
     padding: 8px;
     border-radius: 143px;
@@ -28,14 +29,15 @@
 
 
     &:hover{
-        //background: #0061FD;
         color: #FFFFFF;
         cursor: pointer;
 
     }
 }
 
-.left{
+// Elememnt on the right
+
+.right{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -51,7 +53,7 @@
     .search{
         
         display: flex;
-        flex-direction: row;
+        align-items: center;
         padding: 10px;
         gap: 8px;
         background: #2F2F2F;
@@ -69,17 +71,21 @@
         }
 
         .text2{
-            width: 51px;
-            height: 16px;
+            border: none;
+            background: none;
+            outline: none;
+            width: 85%;
+            height: 23px;
             font-style: normal;
             font-weight: 600;
             font-size: 14px;
             line-height: 18px;
             color: rgba(235, 235, 245, 0.6);
-            flex: none;
-            order: 1;
-            flex-grow: 0;
+           
+           
         }
     }
 
 }
+
+//Responsive BreakPoints

@@ -29,14 +29,14 @@ export const sidebarData = [
     {
         title: "Friends",
         icon: <MdPeopleAlt/>,
-        path: "/friends ",
+        path: "/friends",
        
         
     },
     {
         title: "Live",
         icon: <BsBroadcast/>,
-        path: "/live ",
+        path: "/live",
         
         
     },

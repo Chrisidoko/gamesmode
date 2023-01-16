@@ -1,17 +1,19 @@
 import React from "react";
 import "./pages.scss";
-import { AiFillAppstore } from "react-icons/ai";
+import { BsBroadcast } from "react-icons/bs";
 
-function Library() {
+function Live() {
   return (
     <div className="section">
       <div className="container">
         <div className="pg_text">
-          Library <AiFillAppstore />
+          Live 
+          <BsBroadcast />
         </div>
+        
       </div>
     </div>
   );
 }
 
-export default Library;
+export default Live;

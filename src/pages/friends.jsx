@@ -1,17 +1,17 @@
 import React from "react";
 import "./pages.scss";
-import { AiFillAppstore } from "react-icons/ai";
+import { MdPeopleAlt } from "react-icons/md";
 
-function Library() {
+function Friends() {
   return (
     <div className="section">
       <div className="container">
         <div className="pg_text">
-          Library <AiFillAppstore />
+          Friends <MdPeopleAlt />
         </div>
       </div>
     </div>
   );
 }
 
-export default Library;
+export default Friends;

@@ -2,22 +2,29 @@
     position: relative;
     left: 252px;
     background-color: #141414;
-    min-height: 140vh; //min-height will let the body grow if necessary
+    height: 100%;
     width: calc(100% - 252px); // 100% of the parent element -252px
     padding: 10px 48px 10px 14px; 
     
     
   }
 
+  // Placeholder for Page Text
+  .container{
+    margin-top: 40vh;
+    display: flex;
+    justify-content: center;
+  }
+  
   // page temporary styles
-
   .pg_text{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
     font-weight:900;
     font-size: 55px;
     color: rgb(54, 53, 53);
-    position: absolute;
-    left: 40%;
-    top:30%
+
     
   }
 

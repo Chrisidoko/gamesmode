@@ -1,42 +1,32 @@
-
+// hero container
 .hero_flexbox {
-    position: relative;
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin-top: 16px;
-
-
-
-
-
 }
 
-.hero_gradient{
-    position: absolute;
-    bottom: 0;
-    width: 90%; 
-    height: 315px; 
-    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
-    border-radius: 0px 0px 0px 12px;
-}
-
+// left hero image container
 .hero {
     width: calc(100% - 15vw);
-    min-height: 400px;
+    height: 400px;
     background-color: #2F2F2F;
     border-radius: 12px 0px 0px 12px;
     border-right: 2.5px solid;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: cover;
+    background-position: center;
    
-
-
+}
+// to lift all element in hero container and apply gradient overlay
+.hero_zindex{
+     z-index: 5;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
+     border-radius: 0px 0px 0px 12px;
 }
 
-
-
+// creating a re-useable mixin
 @mixin text_style ($font-weight, $font-size, $line-height, $color) {
     font-weight: $font-weight;
     font-size: $font-size;
@@ -57,18 +47,18 @@
 .hero_text2 {
     @include text_style(600, 14px, 18px, #EBEBF5);
     position: absolute;
-    top: 198px;
+    top: 210px;
     left: 28px;
-    z-index: 2;
+    
 
 }
 
 .hero_text3 {
     @include text_style(600, 24px, 34px, #FFFFFF);
     position: absolute;
-    top: 218px;
+    top: 230px;
     left: 28px;
-    z-index: 2;
+    
 
 
 
