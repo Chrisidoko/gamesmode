@@ -113,7 +113,7 @@
 @media only screen and (max-width: 1068px) {
   .sidebar {
     width: 70px;
-    border-right: 0px ;
+    border-right: 0px;
   }
 
   .Group1 {
@@ -129,27 +129,27 @@
   .sidebarList {
     margin-top: 13px;
     margin-left: 5px;
-    a { 
-     padding-left: 10px; 
+
+    a {
+      padding-left: 10px;
 
 
-     .text {
-      display: none;
-      
+      .text {
+        display: none;
+
+      }
+
     }
- 
-      }
 
-      .active {
-        color: #0061FD;
-        background: transparent;
-  
-      }
-      
-  
+    .active {
+      color: #0061FD;
+      background: transparent;
+
     }
 
 
   }
 
+
+}
 

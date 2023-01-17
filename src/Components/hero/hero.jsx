@@ -3,29 +3,33 @@ import "./hero.scss";
 import { BsArrowRight } from "react-icons/bs";
 import Hero1 from "./images/Hero.jpg";
 import { heroData } from "./heroData";
-import { useParams } from "react-router-dom";
+import { motion} from "framer-motion";
+import { useState, useRef, useEffect } from "react";
 
 function Hero() {
-  const { id } = useParams()
+    const [width, setWidth] = useState(0);
+    const sl_slider = useRef();
+
+
 
   return (
     <>
       <section className="hero_flexbox">
-        <div className="hero" style={{ backgroundImage: `url(${Hero1})` }}>          
+        <div className="hero" style={{ backgroundImage: `url(${Hero1})` }}>
           <div className="hero_zindex">
-          <span className="hero_text1">Fortnite</span>
-          <span className="hero_text2">Update {id}</span>
-          <span className="hero_text3">
-            The hunt is on in Fortnite Chapter 2 -<br /> Season 5: Zero Point.
-          </span>
-          <div className="hero_button">
-            <span className="hero_button_text">Play for free</span>
-            <span className="hero_icon">
-              <BsArrowRight size={24} />
+            <span className="hero_text1">Fortnite</span>
+            <span className="hero_text2">Update </span>
+            <span className="hero_text3">
+              The hunt is on in Fortnite Chapter 2 - Season 5: Zero Point.
             </span>
-          </div>
+            <div className="hero_button">
+              <span className="hero_button_text">
+                Play for free <BsArrowRight />
+              </span>
+            </div>
           </div>
         </div>
+
         <div className="hero_side">
           <ul>
             {heroData.map((val, key) => {

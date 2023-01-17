@@ -19,7 +19,7 @@ function Slider() {
       <div className="sl_grp1">
         <span className="sl_header">Games On Sale</span>
           <span className="sl_arrow2">
-            <IoIosArrowDropright size={29}/>
+            <IoIosArrowDropright />
           </span>
         
       </div>

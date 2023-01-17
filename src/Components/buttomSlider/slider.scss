@@ -1,3 +1,4 @@
+// Text Style Mixin
 @mixin text_style ($font-weight, $font-size, $line-height, $color) {
     font-weight: $font-weight;
     font-size: $font-size;
@@ -6,67 +7,119 @@
     font-style: normal;
 }
 
+// Slider Header Container 
+.sl_grp1 {
 
-.sl_grp1{
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     top: 40px;
-    
+
+    // Slider Text Header
     .sl_header {
         @include text_style(600, 16px, 20px, #FFFFFF);
 
-    
+
     }
 
-    .sl_arrow2{
-        
-        
-         color: rgba(235, 235, 245, 0.6);
+    // Slider Arrow icons
+    .sl_arrow2 {
+        font-size: 29px;
+        color: rgba(235, 235, 245, 0.6);
     }
 }
-.sl_slider{
+
+// Slider Cards Container
+.sl_slider {
     position: relative;
     top: 30px;
-    min-height: 60vh;
+    height: 60vh;
     overflow: hidden;
-    //background-color: rgba(67, 68, 60, 0.849);
+
 
 }
-.sl_flex{
+
+// Slider Cards Flex
+.sl_flex {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    
 
 
-    
+
+
 }
-.items_flex{
+
+//Card
+.items_flex {
     display: flex;
     flex-direction: column;
     gap: 4px;
     position: relative;
     top: 50px;
-    
-    
-    .sl_img{
-    background: #2F2F2F;
-    border-radius: 6px;
-    width:204px ; //calc(100%/2 - 20px);
-    height: 274px;
+
+    // Card Image
+    .sl_img {
+        background: #2F2F2F;
+        border-radius: 6px;
+        width: 204px;
+        height: 274px;
     }
 
-    .sl_text{
+    // Card Title 
+    .sl_text {
         cursor: pointer;
-    @include text_style(600, 16px, 20px, #FFFFFF);  
+        @include text_style(600, 16px, 20px, #FFFFFF);
     }
-    .sl_text2{
-        @include text_style(600, 16px, 20px, rgba(235, 235, 245, 0.6));  
-        
+
+    // Card Tag
+    .sl_text2 {
+        @include text_style(600, 16px, 20px, rgba(235, 235, 245, 0.6));
+
+    }
+
+    // Price
+    .sl_price {
+        @include text_style(600, 16px, 20px, #FFFFFF);
+    }
+}
+
+//Responsive BreakPoints
+
+//Large Screen Sizes
+@media (min-width: 601px) {
+    // .wrapper {
+    //     display: none;
+    // }
+}
+
+// Mobile Breakpoints
+@media (max-width: 600px) {
+    .sl_grp1 {  
+    // Slider Arrow icons
+    .sl_arrow2 {
+        font-size: 20px;
+       
+    }
+}
+    
+    //Card
+    .items_flex {
+        .sl_img {
+            width: 180px;
+            height: 224px;
         }
-        .sl_price{
-            @include text_style(600, 16px, 20px, #FFFFFF); 
-        }   
+        .sl_text {
+            font-size: .85rem;
+        }
+        .sl_text2 {
+            font-size: .85rem;
+         }
+         .sl_price {
+            font-size: .85rem;
+         }
+    }
+
+
 }

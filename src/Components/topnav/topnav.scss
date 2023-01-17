@@ -1,57 +1,62 @@
-.topnav{
+.topnav {
     display: flex;
     justify-content: space-between;
     margin-top: 2%;
+    width: 100%;
 }
-.nav_list{
+
+
+// All nav text element
+.nav_list {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
 
-    .active{
+    .active {
         background: #0061FD;
         color: #FFFFFF;
-    
+
     }
 }
 
-// Elememnt on the left
-.nav_row{
+// navlist element on the left
+.nav_row {
     padding: 8px;
     border-radius: 143px;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 18px; 
+    line-height: 18px;
     color: rgba(235, 235, 245, 0.6);
-    
 
 
-    &:hover{
+
+    &:hover {
         color: #FFFFFF;
         cursor: pointer;
 
     }
 }
 
-// Elememnt on the right
-
-.right{
+// Element on the right
+.right {
     display: flex;
     flex-direction: row;
     align-items: center;
     gap: 10px;
-   
-    .icon2{
+
+    // Alert icon
+    .icon2 {
         padding-right: 32px;
-        padding-top: 8px ;
-        
+        padding-top: 8px;
+
         color: rgba(235, 235, 245, 0.6);
     }
 
-    .search{
-        
+    // Search container
+    .search {
+
         display: flex;
         align-items: center;
         padding: 10px;
@@ -60,17 +65,16 @@
         border-radius: 24px;
         width: 318px;
         height: 36px;
-        
 
-        .icon_2{
+
+        .icon_2 {
             flex: none;
             order: 0;
             flex-grow: 0;
             color: rgba(235, 235, 245, 0.6)
-
         }
 
-        .text2{
+        .text2 {
             border: none;
             background: none;
             outline: none;
@@ -81,11 +85,74 @@
             font-size: 14px;
             line-height: 18px;
             color: rgba(235, 235, 245, 0.6);
-           
-           
+
+
         }
     }
 
 }
+/* Mobile Classes*/
+
+//flex Container
+.mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 86%;
+    height: 60px;
+    padding-right: 15px;
+    padding-top: 5px;
+    background-color: #141414;
+
+}
+
+//DropDown Menu
+.drop{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 18px;
+    color: rgba(235, 235, 245, 0.6);
+    cursor: pointer;
+
+}
+// mobile search button
+.msearch{   
+    color: rgba(235, 235, 245, 0.6);
+    cursor: pointer;
+    margin-top: 7px;
+}
+/* End of Mobile Classes*/
 
 //Responsive BreakPoints
+
+//Large Screen Sizes
+@media (min-width: 601px) {
+    .mobile {
+        display: none;
+    }
+}
+
+// Mobile Breakpoints
+@media (max-width: 600px) {
+
+
+    .right {
+        display: none;
+    }
+
+    .nav_list {
+       display: none;
+
+    }
+
+
+}
