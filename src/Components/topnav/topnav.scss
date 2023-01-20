@@ -5,7 +5,6 @@
     width: 100%;
 }
 
-
 // All nav text element
 .nav_list {
     display: flex;
@@ -14,9 +13,15 @@
     gap: 10px;
 
     .active {
-        background: #0061FD;
-        color: #FFFFFF;
+        background: #0061fd;
+        color: #ffffff;
+    }
+}
 
+#Light .nav_list {
+    .active {
+        background: #0061fd;
+        color: #ffffff;
     }
 }
 
@@ -30,13 +35,24 @@
     line-height: 18px;
     color: rgba(235, 235, 245, 0.6);
 
+    &:hover {
+        color: #ffffff;
+        cursor: pointer;
+    }
+}
 
+// Light Mode elements
+#Light .nav_row {
+    color: #343541;
 
     &:hover {
-        color: #FFFFFF;
-        cursor: pointer;
-
+        color: #0061fd;
     }
+}
+
+//Temporary Format for active
+#Light #temp {
+    color: #ffffff;
 }
 
 // Element on the right
@@ -50,28 +66,25 @@
     .icon2 {
         padding-right: 32px;
         padding-top: 8px;
-
         color: rgba(235, 235, 245, 0.6);
     }
 
     // Search container
     .search {
-
         display: flex;
         align-items: center;
         padding: 10px;
         gap: 8px;
-        background: #2F2F2F;
+        background: #2f2f2f;
         border-radius: 24px;
         width: 318px;
         height: 36px;
-
 
         .icon_2 {
             flex: none;
             order: 0;
             flex-grow: 0;
-            color: rgba(235, 235, 245, 0.6)
+            color: rgba(235, 235, 245, 0.6);
         }
 
         .text2 {
@@ -85,16 +98,33 @@
             font-size: 14px;
             line-height: 18px;
             color: rgba(235, 235, 245, 0.6);
-
-
         }
     }
-
 }
+
+// Light Mode Elements
+#Light .right {
+    .icon2 {
+        color: #343541;
+    }
+
+    .search {
+        background: #d9d9e3;
+
+        .icon_2 {
+            color: #343541;
+        }
+
+        .text2 {
+            color: #343541;
+        }
+    }
+}
+
 /* Mobile Classes*/
 
 //flex Container
-.mobile{
+.mobile {
     position: fixed;
     top: 0;
     right: 0;
@@ -107,11 +137,10 @@
     padding-right: 15px;
     padding-top: 5px;
     background-color: #141414;
-
 }
 
 //DropDown Menu
-.drop{
+.drop {
     margin: auto;
     display: flex;
     align-items: center;
@@ -122,14 +151,15 @@
     line-height: 18px;
     color: rgba(235, 235, 245, 0.6);
     cursor: pointer;
-
 }
+
 // mobile search button
-.msearch{   
+.msearch {
     color: rgba(235, 235, 245, 0.6);
     cursor: pointer;
     margin-top: 7px;
 }
+
 /* End of Mobile Classes*/
 
 //Responsive BreakPoints
@@ -143,16 +173,11 @@
 
 // Mobile Breakpoints
 @media (max-width: 600px) {
-
-
     .right {
         display: none;
     }
 
     .nav_list {
-       display: none;
-
+        display: none;
     }
-
-
 }

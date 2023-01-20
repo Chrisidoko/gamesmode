@@ -47,13 +47,13 @@ export const sidebarData2 = [
     {
         title: "Downloads",
         icon: <AiOutlineDownload/>,
-        path:"/Downloads",
+        path:"/downloads",
         
     },
     {
         title: "Settings",
         icon: <MdSettings/>,
-        path:"/Settings",
+        path:"/settings",
         
     },
 

@@ -30,6 +30,19 @@
     }
 }
 
+// Light Mode Element
+#Light .sl_grp1 {
+    .sl_header {
+        color: #343541;
+        font-weight: 700;
+    }
+
+    .sl_arrow2 {
+        color: #343541;
+        opacity: 0.6;
+    }
+}
+
 // Slider Cards Container
 .sl_slider {
     position: relative;
@@ -85,6 +98,21 @@
     }
 }
 
+// Light Mode Element
+#Light .items_flex {
+    .sl_text {
+        color: #343541;
+    }
+
+    .sl_text2 {
+        color: #0061FD;
+    }
+
+    .sl_price {
+        color: #343541;
+    }
+}
+
 //Responsive BreakPoints
 
 //Large Screen Sizes
@@ -96,29 +124,33 @@
 
 // Mobile Breakpoints
 @media (max-width: 600px) {
-    .sl_grp1 {  
-    // Slider Arrow icons
-    .sl_arrow2 {
-        font-size: 20px;
-       
+    .sl_grp1 {
+
+        // Slider Arrow icons
+        .sl_arrow2 {
+            font-size: 20px;
+
+        }
     }
-}
-    
+
     //Card
     .items_flex {
         .sl_img {
             width: 180px;
             height: 224px;
         }
+
         .sl_text {
             font-size: .85rem;
         }
+
         .sl_text2 {
             font-size: .85rem;
-         }
-         .sl_price {
+        }
+
+        .sl_price {
             font-size: .85rem;
-         }
+        }
     }
 
 
