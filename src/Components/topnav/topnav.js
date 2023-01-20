@@ -16,7 +16,9 @@ function Topnav() {
           </span>
         </div>
         <ul className="nav_list">
-          <span className="nav_row active">Discover</span>
+          <span className="nav_row active" id="temp">
+            Discover
+          </span>
           <span className="nav_row">Browse</span>
           <span className="nav_row">Wishlist</span>
         </ul>

@@ -5,6 +5,7 @@ import Topnav from '../Components/topnav/topnav';
 import "./pages.scss";
 
 
+
 function Store() {
   return (
     <>

@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: fixed;
-  min-height: 100vh;
+  height: 100vh;
   width: 252px;
   left: 0px;
   top: 0px;
@@ -13,7 +13,13 @@
 
 }
 
+// Theme Switch
+#Light .sidebar {
+  background-color: #f7f7f8;
+  border-right: 2.5px solid #d9d9e3;
+}
 
+// Container for Logo
 .Group1 {
   display: flex;
   flex-direction: row;
@@ -39,38 +45,29 @@
   height: auto;
   padding: 0;
   margin-bottom: 12%;
+  color: rgba(235, 235, 245, 0.6);
 
 
 
-
-
-
-  // navlink from router is just an a tag
+  // navlink from router is just an anchor tag
   a {
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 12px 16px 12px 37px;
     gap: 12px;
-    color: rgba(235, 235, 245, 0.6);
     margin-left: 12px;
     transition: all 0.3s;
 
 
-
-
-
     &:hover {
       cursor: pointer;
-      //background: #2f2f2f;
       color: #ffff;
-      border-radius: 12px;
-      width: 228px;
-      height: 48px;
+
 
     }
 
-
+    // Anchor Text
     .text {
       font-weight: 600;
       font-size: 14px;
@@ -84,6 +81,8 @@
     }
   }
 
+
+
   // default from react router class
   .active {
     background: #2f2f2f;
@@ -93,9 +92,28 @@
   }
 }
 
+// Color theme Change
+#Light a {
+  &:hover {
+    color: #0061FD;
+  }
+}
+
+#Light .active {
+  background-color: #d9d9e3;
+}
+
+#Light .sidebarList {
+  color: #343541
+}
+
+
+
+// Container for profile photo
 .Group2 {
   position: relative;
 
+  // Green dot on profile image
   .dot {
     border: 0.5px solid rgba(50, 215, 75, 0.6);
     background: #32D74B;
@@ -148,8 +166,13 @@
     }
 
 
+
+
+  }
+
+  #Light .active {
+    background: transparent;
   }
 
 
 }
-

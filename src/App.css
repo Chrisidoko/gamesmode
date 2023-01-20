@@ -8,9 +8,10 @@
     overflow-y: scroll;
    
 }
-body{
+/* body{
   background-color: #141414;
-}
+} */
+
 
 ::-webkit-scrollbar{
     width: 6px;

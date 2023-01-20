@@ -3,15 +3,8 @@ import "./hero.scss";
 import { BsArrowRight } from "react-icons/bs";
 import Hero1 from "./images/Hero.jpg";
 import { heroData } from "./heroData";
-import { motion} from "framer-motion";
-import { useState, useRef, useEffect } from "react";
 
 function Hero() {
-    const [width, setWidth] = useState(0);
-    const sl_slider = useRef();
-
-
-
   return (
     <>
       <section className="hero_flexbox">
