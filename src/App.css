@@ -8,9 +8,9 @@
     overflow-y: scroll;
    
 }
-/* body{
-  background-color: #141414;
-} */
+body{
+  padding: 0;
+}
 
 
 ::-webkit-scrollbar{

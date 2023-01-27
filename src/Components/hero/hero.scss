@@ -18,6 +18,11 @@
 
 }
 
+#Light .hero {
+    background-color: #d9d9e3;
+    border-right: 2.5px solid #f7f7f8;
+}
+
 // to lift all element in hero container and apply gradient overlay
 .hero_zindex {
     position: relative;
@@ -163,7 +168,7 @@
     }
 
     .hero {
-        width: 900%;
+        width: 97%;
         height: 350px;
         border-radius: 12px;
         border-right: 0;

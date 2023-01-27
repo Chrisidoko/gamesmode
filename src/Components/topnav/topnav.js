@@ -1,16 +1,42 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./topnav.scss";
 import { MdNotifications, MdKeyboardArrowDown } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
+import { BsFlower2 } from "react-icons/bs";
 
 function Topnav() {
+  const [open, setOpen] = useState(false);
+
+  const menuRef = useRef();
+  const navRef = useRef();
+
+  window.addEventListener("click", (e) => {
+    if (e.target !== menuRef.current && e.target !== navRef.current) {
+      setOpen(false);
+    }
+  });
   return (
     <>
       <div className="topnav">
         <div className="mobile">
-          <span className="drop">
-            Browse <MdKeyboardArrowDown size={18} />
+          <BsFlower2 color="royalblue" size={24} />
+          <span ref={navRef} onClick={() => setOpen(!open)} className="drop">
+            Discover <MdKeyboardArrowDown size={18} />
           </span>
+          {open ? (
+            <div ref={menuRef} className="menu">
+              <ul>
+                <li>Discover</li>
+                <div />
+                <li>Browse</li>
+                <div />
+                <li>Wishlist</li>
+                <div />
+              </ul>
+            </div>
+          ) : (
+            ""
+          )}
           <span className="msearch">
             <FiSearch size={18} />
           </span>

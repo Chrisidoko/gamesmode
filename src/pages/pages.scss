@@ -1,50 +1,50 @@
-.section{
-    position: relative;
-    left: 252px;
-    height: 140vh;
-    width: calc(100% - 252px); // 100% of the parent element -252px
-    padding: 10px 48px 10px 14px; 
-    background-color: #141414;
-    
-  }
+.section {
+  position: relative;
+  left: 252px;
+  height: 140vh;
+  width: calc(100% - 252px); // 100% of the parent element -252px
+  padding: 10px 48px 10px 14px;
+  background-color: #141414;
+
+}
+
 // Theme Switch
-  #Light .section{
-    background-color: #f7f7f8;
-   
-  }
+#Light .section {
+  background-color: #f7f7f8;
 
-  // Placeholder for Page Text
-  .container{
-    margin-top: 40vh;
-    display: flex;
-    justify-content: center;
-  }
-  
-  // page temporary styles
-  .pg_text{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    font-weight:900;
-    font-size: 55px;
-    color: rgb(54, 53, 53);
+}
 
-    
-  }
+// Placeholder for Page Text
+.container {
+  display: flex;
+  justify-content: center;
+  padding-top: 40vh;
+}
 
-  @media only screen and (max-width: 1068px) {
-  .section{
+// page temporary styles
+.pg_text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 900;
+  font-size: 55px;
+  color: rgb(54, 53, 53);
+
+
+}
+
+@media only screen and (max-width: 1068px) {
+  .section {
     position: relative;
     left: 70px;
     width: calc(100% - 70px);
   }
-    }
+}
 
 // Mobile Breakpoint
 @media (max-width: 600px) {
-  .section{
-  padding: 0px 15px 10px 0px;
+  .section {
+    padding: 0px 15px 10px 15px;
   }
-  
-}
 
+}
