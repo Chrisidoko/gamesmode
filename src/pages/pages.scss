@@ -1,7 +1,8 @@
 .section {
   position: relative;
   left: 252px;
-  height: 140vh;
+  min-height: 140vh;
+  min-height: 140dvh; // mobile compactable
   width: calc(100% - 252px); // 100% of the parent element -252px
   padding: 10px 48px 10px 14px;
   background-color: #141414;
