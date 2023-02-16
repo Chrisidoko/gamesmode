@@ -7,29 +7,6 @@
     font-style: normal;
 }
 
-// Slider Header Container 
-.sl_grp1 {
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-    top: 40px;
-
-    // Slider Text Header
-    .sl_header {
-        @include text_style(600, 16px, 20px, #FFFFFF);
-
-
-    }
-
-    // Slider Arrow icons
-    .sl_arrow2 {
-        font-size: 29px;
-        color: rgba(235, 235, 245, 0.6);
-    }
-}
-
 // Light Mode Element
 #Light .sl_grp1 {
     .sl_header {
@@ -37,32 +14,20 @@
         font-weight: 700;
     }
 
-    .sl_arrow2 {
-        color: #343541;
-        opacity: 0.6;
-    }
+
 }
 
 // Slider Cards Container
-.sl_slider {
+.mySwiper {
     position: relative;
     top: 30px;
-    height: 60vh;
+    height: 65vh;
     overflow: hidden;
 
 
 }
 
-// Slider Cards Flex
-.sl_flex {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
 
-
-
-
-}
 
 //Card
 .items_flex {
@@ -70,14 +35,18 @@
     flex-direction: column;
     gap: 4px;
     position: relative;
-    top: 50px;
+    top: 17%;
+    width: 100%;
 
     // Card Image
     .sl_img {
         background: #2F2F2F;
         border-radius: 6px;
-        width: 204px;
-        height: 274px;
+        height: max(210px, 19vw);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+
     }
 
     // Card Title 
@@ -98,6 +67,8 @@
     }
 }
 
+
+
 // Light Mode Element
 #Light .items_flex {
     .sl_text {
@@ -110,6 +81,50 @@
 
     .sl_price {
         color: #343541;
+    }
+}
+
+// Slider Text Header
+.sl_header {
+    @include text_style(600, 16px, 20px, #FFFFFF);
+    z-index: 1;
+    position: absolute;
+    top: 5%;
+}
+
+
+
+// swiper arrow buttons
+.swiperNavNext,
+.swiperNavPrev {
+    position: absolute;
+    top: 5%;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 29px;
+    color: rgba(235, 235, 245, 0.6);
+}
+
+.swiperNavNext {
+    margin-right: 0;
+}
+
+.swiperNavPrev {
+    margin-right: 40px;
+}
+
+// Light Mode Element
+#Light .mySwiper {
+    .sl_header {
+        color: #343541;
+        font-weight: 700;
+    }
+
+    .swiperNavNext,
+    .swiperNavPrev {
+        color: #343541;
+        opacity: 0.6;
     }
 }
 
@@ -135,10 +150,6 @@
 
     //Card
     .items_flex {
-        .sl_img {
-            width: 180px;
-            height: 224px;
-        }
 
         .sl_text {
             font-size: .85rem;

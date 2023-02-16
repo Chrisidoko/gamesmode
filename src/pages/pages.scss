@@ -20,6 +20,7 @@
   display: flex;
   justify-content: center;
   padding-top: 40vh;
+  overflow: hidden;
 }
 
 // page temporary styles
@@ -33,6 +34,19 @@
 
 
 }
+
+.slide {
+  position: absolute;
+  bottom: 0%;
+  height: 300px;
+  width: 100%;
+  background-color: rgb(54, 53, 53);
+  padding-left: 10px;
+}
+
+
+
+
 
 @media only screen and (max-width: 1068px) {
   .section {
