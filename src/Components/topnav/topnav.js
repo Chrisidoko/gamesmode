@@ -3,6 +3,8 @@ import "./topnav.scss";
 import { MdNotifications, MdKeyboardArrowDown } from "react-icons/md";
 import { FiSearch } from "react-icons/fi";
 import { BsFlower2 } from "react-icons/bs";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function Topnav() {
   const [open, setOpen] = useState(false);
@@ -15,6 +17,9 @@ function Topnav() {
       setOpen(false);
     }
   });
+
+  const { cartTotalQuantity } = useSelector((state) => state.cart);
+
   return (
     <>
       <div className="topnav">
@@ -50,9 +55,14 @@ function Topnav() {
         </ul>
 
         <div className="right">
-          <span className="icon2">
-            <MdNotifications size={24} />
-          </span>
+          <Link to="/downloads">
+            <div className="icon2">
+              <MdNotifications size={27} />
+              {cartTotalQuantity > 0 && (
+                <div className="count">{cartTotalQuantity}</div>
+              )}
+            </div>
+          </Link>
           <div className="search">
             <span className="icon_2">
               <FiSearch size={16} />

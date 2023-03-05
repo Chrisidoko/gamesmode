@@ -154,6 +154,18 @@
     // }
 }
 
+//medium Screen Sizes
+@media (max-width: 822px) {
+
+    .hero_zindex {
+        padding-top: 110px;
+    }
+
+    .hero_text3 {
+        font-size: clamp(16px, 3.5vw, 21px);
+    }
+}
+
 // Mobile Breakpoints
 @media (max-width: 600px) {
 
@@ -176,11 +188,12 @@
         border-radius: 12px;
         gap: .5rem;
         padding-right: 18px;
+        padding-top: 150px;
     }
 
     .hero_text3 {
         width: 100%;
-        font-size: clamp(16px, 3.5vw, 21px);
+        //font-size: clamp(16px, 3.5vw, 21px);
         line-height: 20px;
     }
 

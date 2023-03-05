@@ -1,8 +1,8 @@
 .section {
   position: relative;
   left: 252px;
-  min-height: 140vh;
-  min-height: 140dvh; // mobile compactable
+  min-height: 130vh;
+  min-height: 130svh; // mobile compactable
   width: calc(100% - 252px); // 100% of the parent element -252px
   padding: 10px 48px 10px 14px;
   background-color: #141414;
@@ -35,14 +35,7 @@
 
 }
 
-.slide {
-  position: absolute;
-  bottom: 0%;
-  height: 300px;
-  width: 100%;
-  background-color: rgb(54, 53, 53);
-  padding-left: 10px;
-}
+
 
 
 

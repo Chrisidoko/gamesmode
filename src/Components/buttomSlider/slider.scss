@@ -52,7 +52,7 @@
     // Card Title 
     .sl_text {
         cursor: pointer;
-        @include text_style(600, 16px, 20px, #FFFFFF);
+        @include text_style(600, 16px, 20px, #f5f5f5);
     }
 
     // Card Tag
@@ -63,7 +63,7 @@
 
     // Price
     .sl_price {
-        @include text_style(600, 16px, 20px, #FFFFFF);
+        @include text_style(600, 16px, 20px, #f5f5f5);
     }
 }
 
@@ -86,7 +86,7 @@
 
 // Slider Text Header
 .sl_header {
-    @include text_style(600, 16px, 20px, #FFFFFF);
+    @include text_style(600, 16px, 20px, #f5f5f5);
     z-index: 1;
     position: absolute;
     top: 5%;
