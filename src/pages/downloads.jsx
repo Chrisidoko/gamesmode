@@ -54,8 +54,6 @@ function Downloads() {
                       <AiOutlineDownload />
                     </div>
                     <div className="buttonCon">
-                      <button>-</button>
-                      {cartItem.cartQuantity} <button>+</button>
                       <span />
                       <button onClick={() => handleRemoveFromCart(cartItem)}>
                         Remove
@@ -76,7 +74,7 @@ function Downloads() {
             <div className="s_header">Games and Apps Summary</div>
             <div className="s_list">
               <div className="s_row">
-                <span>Price</span> <span>$59.99</span>
+                <span>Price</span> <span>${cart.cartTotalAmount}</span>
               </div>
               <div className="s_row">
                 <span>Sale Discount</span> <span>-$40.20</span>
@@ -89,7 +87,7 @@ function Downloads() {
               <div className="s_row">
                 <span>Subtotal</span>
 
-                <span>${cart.cartTotalAmount}</span>
+                <span>${cart.cartTotalAmount - 1}</span>
               </div>
               <button>
                 <span>Check Out</span>

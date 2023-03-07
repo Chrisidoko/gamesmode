@@ -39,6 +39,7 @@ function Home() {
         <div className="pg_text">
           Home <MdHomeFilled />
         </div>
+        <p>would have users games "use a temp placeholder"</p>
       </div>
     </div>
   );
