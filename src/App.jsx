@@ -2,6 +2,7 @@ import "./App.css";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
+import { useEffect } from "react";
 
 import Sidebar from "./Components/Sidebar/sidebar";
 import Topnav from "./Components/topnav/topnav";
@@ -15,10 +16,19 @@ import Downloads from "./pages/downloads";
 import Settings from "./pages/settings";
 
 import { createContext, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getTotals } from "./features/cartSlice";
 
 export const ThemeContext = createContext(null);
 
 function App() {
+  //for cart totals
+  const { cartItems } = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getTotals());
+  }, [cartItems]);
+
   const [theme, setTheme] = useState("Dark");
   //  simple toggle function to swap between themes
   const toggleTheme = () => {

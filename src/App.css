@@ -4,13 +4,11 @@
     padding: 0;
     
 }
-.html{
+.html, body{
     overflow-y: scroll;
+    height:100%;
+    scroll-behavior: smooth;
    
-   
-}
-body{
-  padding: 0;
 }
 
 
@@ -27,5 +25,5 @@ body{
 
   ::-webkit-scrollbar-thumb{
    background-color: #2F2F2F;;
-   height: 20px;
+   height: 0px;
   }

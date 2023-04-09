@@ -1,11 +1,14 @@
 .section {
   position: relative;
   left: 252px;
-  min-height: 130vh;
-  min-height: 130svh; // mobile compactable
+
+  min-height: 100vh;
+  min-height: 100svh; // mobile compactable
   width: calc(100% - 252px); // 100% of the parent element -252px
-  padding: 10px 48px 10px 14px;
+  padding: 10px 48px 40px 14px;
   background-color: #141414;
+
+
 
 }
 
@@ -19,8 +22,12 @@
 .container {
   display: flex;
   justify-content: center;
-  padding-top: 40vh;
   overflow: hidden;
+  height: 320px;
+  width: 320px;
+  //border: 1px solid red;
+  margin: 10% auto;
+
 }
 
 // page temporary styles
