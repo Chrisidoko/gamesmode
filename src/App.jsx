@@ -27,7 +27,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getTotals());
-  }, [cartItems]);
+  }, [cartItems, dispatch]);
 
   const [theme, setTheme] = useState("Dark");
   //  simple toggle function to swap between themes
