@@ -1,14 +1,14 @@
 import { useEffect } from "react";
-import "./pages.scss";
+import "../pages.scss";
 import "./cart.scss";
 import { AiOutlineDownload } from "react-icons/ai";
 
 import { Link } from "react-router-dom";
 
 import { useSelector, useDispatch } from "react-redux";
-import { removeFromCart, clearCart, getTotals } from "../features/cartSlice";
+import { removeFromCart, clearCart, getTotals } from "../../features/cartSlice";
 
-function Downloads() {
+function Cart() {
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -96,31 +96,8 @@ function Downloads() {
           </div>
         </div>
       )}
-      {/* <div className="container">
-        <div className="pg_text">
-          {cart.cartItems.length === 0 ? (
-            <div> Your cart is currently empty</div>
-          ) : (
-            <div>
-              {cart.cartItems?.map((cartItem) => (
-                <div key={cartItem.id}>
-                  <span>{cartItem.title}</span>
-                  <button>Remove</button>
-                  <button>-</button>
-                  <div>{cartItem.carQuantity}</div>
-                  <button>+</button>
-                  <div className="cartproduct total">
-                    ${cartItem.price * cartItem.carQuantity}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-          Cart <AiOutlineDownload />
-        </div>
-      </div> */}
     </div>
   );
 }
 
-export default Downloads;
+export default Cart;

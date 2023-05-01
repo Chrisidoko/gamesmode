@@ -1,9 +1,10 @@
 import React from "react";
-import "./pages.scss";
+import "../pages.scss";
+import "./home.scss";
 import { MdHomeFilled } from "react-icons/md";
 
-import { useGetAllproductsQuery } from "../features/productsApi";
-import { addToCart } from "../features/cartSlice";
+import { useGetAllproductsQuery } from "../../features/productsApi";
+import { addToCart } from "../../features/cartSlice";
 
 import { useDispatch } from "react-redux";
 

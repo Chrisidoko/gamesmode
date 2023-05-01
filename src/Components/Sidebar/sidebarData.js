@@ -35,7 +35,7 @@ export const sidebarData2 = [
   {
     title: "Cart",
     icon: <AiOutlineDownload />,
-    path: "/downloads",
+    path: "/cart",
   },
   {
     title: "Settings",

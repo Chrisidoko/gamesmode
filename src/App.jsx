@@ -8,16 +8,17 @@ import Sidebar from "./Components/Sidebar/sidebar";
 import Topnav from "./Components/topnav/topnav";
 
 import Library from "./pages/library";
-import Home from "./pages/home";
+import Home from "./pages/home/home";
 import Store from "./pages/store";
 import Live from "./pages/live";
 import Friends from "./pages/friends";
-import Downloads from "./pages/downloads";
+import Cart from "./pages/cart/cart";
 import Settings from "./pages/settings";
 
 import { createContext, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getTotals } from "./features/cartSlice";
+import Product from "./pages/product/product";
 
 export const ThemeContext = createContext(null);
 
@@ -50,8 +51,9 @@ function App() {
           <Route path="/library" element={<Library />} />
           <Route path="/friends" element={<Friends />} />
           <Route path="/live" element={<Live />} />
-          <Route path="/downloads" element={<Downloads />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/product" element={<Product />} />
           <Route
             path="*"
             element={<h1>Not found 404 .....Not found 404...Not found 404</h1>}
