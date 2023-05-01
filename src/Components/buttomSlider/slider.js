@@ -12,12 +12,25 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Keyboard, Navigation } from "swiper";
+import Slide from "../slide/slide";
 
 function Slider() {
   const swiperNavPrevRef = useRef(null);
   const swiperNavNextRef = useRef(null);
   return (
     <>
+      <div className="middle">
+        <div className="sl_header">Games On Sale</div>
+
+        <div className="Navgroup">
+          <div className="swiperNavNext" ref={swiperNavNextRef}>
+            <IoIosArrowDropright />
+          </div>
+          <div className="swiperNavPrev" ref={swiperNavPrevRef}>
+            <IoIosArrowDropleft />
+          </div>
+        </div>
+      </div>
       <Swiper
         keyboard={{
           enabled: true,
@@ -53,28 +66,10 @@ function Slider() {
           swiper.navigation.update();
         }}
       >
-        <div className="sl_header">Games On Sale</div>
-
-        <div className="Navgroup">
-          <div className="swiperNavNext" ref={swiperNavNextRef}>
-            <IoIosArrowDropright />
-          </div>
-          <div className="swiperNavPrev" ref={swiperNavPrevRef}>
-            <IoIosArrowDropleft />
-          </div>
-        </div>
         {buttomData.map((val, key) => {
           return (
             <SwiperSlide key={key}>
-              <div className="items_flex">
-                <div
-                  className="sl_img"
-                  style={{ backgroundImage: `url(${val.Image})` }}
-                ></div>
-                <span className="sl_text">{val.title}</span>
-                <span className="sl_text2">{val.category}</span>
-                <span className="sl_price">{val.price}</span>
-              </div>
+              <Slide {...val} />
             </SwiperSlide>
           );
         })}

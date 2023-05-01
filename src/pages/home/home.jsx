@@ -7,6 +7,7 @@ import { useGetAllproductsQuery } from "../../features/productsApi";
 import { addToCart } from "../../features/cartSlice";
 
 import { useDispatch } from "react-redux";
+import Slide from "../../Components/slide/slide";
 
 function Home() {
   const { data, error, isLoading } = useGetAllproductsQuery();
@@ -17,6 +18,19 @@ function Home() {
   };
   return (
     <div className="section">
+      <div className="home_head">
+        <span>Showing</span>
+        <span>New Releases</span>
+      </div>
+      <div className="card-grid">
+        <Slide title="HeadieOne" category="Action" price="$2.99" />
+        <Slide title="HeadieOne" category="Action" price="$2.99" />
+        <Slide title="HeadieOne" category="Action" price="$2.99" />
+        <Slide title="HeadieOne" category="Action" price="$2.99" />
+        <Slide title="HeadieOne" category="Action" price="$2.99" />
+        <Slide title="HeadieOne" category="Action" price="$2.99" />
+        <Slide title="HeadieOne" category="Action" price="$2.99" />
+      </div>
       {isLoading ? (
         <p>Loading..</p>
       ) : error ? (
@@ -36,12 +50,6 @@ function Home() {
           </div>
         </>
       )}
-      <div className="container">
-        <div className="pg_text">
-          Home <MdHomeFilled />
-        </div>
-        <p>would have users games "use a temp placeholder"</p>
-      </div>
     </div>
   );
 }

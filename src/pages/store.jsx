@@ -8,6 +8,7 @@ function Store() {
     <>
       <div className="section">
         <Hero />
+        <div className="spacer1"></div>
         <Slider />
       </div>
     </>

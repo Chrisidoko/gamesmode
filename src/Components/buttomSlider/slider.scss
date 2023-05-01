@@ -19,100 +19,52 @@
 
 // Slider Cards Container
 .mySwiper {
-    position: relative;
-    top: 30px;
+    padding-top: 91px;
     height: 65vh;
     overflow: hidden;
 
-
 }
 
-
-
-//Card
-.items_flex {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-    position: relative;
-    top: 17%;
-    width: 100%;
-
-    // Card Image
-    .sl_img {
-        background: #2F2F2F;
-        border-radius: 6px;
-        height: max(210px, 19vw);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-
-    }
-
-    // Card Title 
-    .sl_text {
-        cursor: pointer;
-        @include text_style(600, 16px, 20px, #f5f5f5);
-    }
-
-    // Card Tag
-    .sl_text2 {
-        @include text_style(600, 16px, 20px, rgba(235, 235, 245, 0.6));
-
-    }
-
-    // Price
-    .sl_price {
-        @include text_style(600, 16px, 20px, #f5f5f5);
-    }
-}
-
-
-
-// Light Mode Element
-#Light .items_flex {
-    .sl_text {
-        color: #343541;
-    }
-
-    .sl_text2 {
-        color: #0061FD;
-    }
-
-    .sl_price {
-        color: #343541;
-    }
-}
 
 // Slider Text Header
 .sl_header {
     @include text_style(600, 16px, 20px, #f5f5f5);
     z-index: 1;
-    position: absolute;
-    top: 5%;
+
 }
 
+.middle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 25px;
+
+    .Navgroup {
+        display: flex;
+    }
+
+}
 
 
 // swiper arrow buttons
 .swiperNavNext,
 .swiperNavPrev {
-    position: absolute;
-    top: 5%;
-    right: 0;
-    z-index: 1;
+
     cursor: pointer;
-    font-size: 29px;
+    font-size: 32px;
     color: rgba(235, 235, 245, 0.6);
 }
 
 .swiperNavNext {
     margin-right: 0;
+    order: 2;
 }
 
 .swiperNavPrev {
-    margin-right: 40px;
+    margin-right: 20px;
+    order: 1;
 }
+
 
 // Light Mode Element
 #Light .mySwiper {
@@ -148,21 +100,6 @@
         }
     }
 
-    //Card
-    .items_flex {
-
-        .sl_text {
-            font-size: .85rem;
-        }
-
-        .sl_text2 {
-            font-size: .85rem;
-        }
-
-        .sl_price {
-            font-size: .85rem;
-        }
-    }
 
 
 }
