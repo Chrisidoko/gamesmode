@@ -28,7 +28,7 @@ const cartSlice = createSlice({
       } else {
         let tempProductItem = { ...action.payload, cartQuantity: 1 };
         state.cartItems.push(tempProductItem);
-        toast.success(`${action.payload.title} added to cart`, {
+        toast.success(`${action.payload.name} added to cart`, {
           position: "bottom-right",
         });
       }
@@ -84,8 +84,8 @@ const cartSlice = createSlice({
     getTotals(state, action) {
       let { total, quantity } = state.cartItems.reduce(
         (cartTotal, cartItem) => {
-          const { albumId, cartQuantity } = cartItem;
-          const itemTotal = albumId * cartQuantity;
+          const { reviews_text_count, cartQuantity } = cartItem; //check this line in case of NAN error
+          const itemTotal = reviews_text_count * cartQuantity; //check this line in case of NAN error
 
           cartTotal.total += itemTotal;
           cartTotal.quantity += cartQuantity;

@@ -13,7 +13,7 @@ export const productsFetch = createAsyncThunk(
   "products/productsFetch", // Action Type ("products": this is the name of our Slice)
   async () => {
     const response = await axios.get(
-      "https://jsonplaceholder.typicode.com/photos"
+      "https://api.rawg.io/api/games?key=4292472fd679469ea48703bd185d7750"
     );
     return response?.data;
   } // Payload Creator

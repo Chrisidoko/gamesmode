@@ -1,7 +1,9 @@
 import "./slider.scss";
 import { IoIosArrowDropright, IoIosArrowDropleft } from "react-icons/io";
-import { buttomData } from "./sliderData";
+//import { buttomData } from "./sliderData";
 import { useRef } from "react";
+
+import { useGetAllproductsQuery } from "../../features/productsApi";
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +17,8 @@ import { Keyboard, Navigation } from "swiper";
 import Slide from "../slide/slide";
 
 function Slider() {
+  const { data, error, isLoading } = useGetAllproductsQuery();
+
   const swiperNavPrevRef = useRef(null);
   const swiperNavNextRef = useRef(null);
   return (
@@ -66,13 +70,21 @@ function Slider() {
           swiper.navigation.update();
         }}
       >
-        {buttomData.map((val, key) => {
-          return (
-            <SwiperSlide key={key}>
-              <Slide {...val} />
-            </SwiperSlide>
-          );
-        })}
+        {isLoading ? (
+          <p>Loading..</p>
+        ) : error ? (
+          <p>An error occured..</p>
+        ) : (
+          <>
+            {data.results?.slice(0, 7).map((val, key) => {
+              return (
+                <SwiperSlide key={key}>
+                  <Slide {...val} />
+                </SwiperSlide>
+              );
+            })}
+          </>
+        )}
       </Swiper>
     </>
   );

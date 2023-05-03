@@ -32,10 +32,9 @@
         margin-left: 10px;
         background-color: rgba(255, 255, 255, 0.1);
         border-radius: 4px;
-        padding: 4px;
+        padding: 2px 5px;
         text-align: center;
-        width: 32px;
-        height: 25px;
+
 
     }
 
@@ -58,7 +57,7 @@
 }
 
 .p_image {
-    //background-color: #ccc;
+
     height: min(382px, 27vw);
     width: 100%;
 
@@ -93,9 +92,9 @@
 
 }
 
-.spacer {
-    width: 35%;
-}
+// .spacer {
+//     // width: 30%;
+// }
 
 .line {
     border-left: 1px solid #262626;
@@ -112,10 +111,12 @@
 
     span:first-child {
         color: rgba(235, 235, 245, 0.6);
+        text-decoration: none;
     }
 
-    span:nth-child(2) {
+    span {
         display: flex;
+        flex-wrap: wrap;
         gap: 10px;
         color: #f5f5f5;
         text-decoration: underline;
@@ -316,13 +317,25 @@
         .left {
             order: 2;
             width: 100%;
+
+            .p_image {
+
+                height: 210px;
+
+
+
+            }
         }
 
         .desc_side {
             order: 1;
             width: 100%;
             padding-right: 0px;
-            margin-top: 50px;
+            margin-top: 0px;
+
+            .side_img {
+                height: 10px;
+            }
         }
     }
 

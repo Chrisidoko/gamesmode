@@ -53,7 +53,7 @@ function App() {
           <Route path="/live" element={<Live />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/settings" element={<Settings />} />
-          <Route path="/product" element={<Product />} />
+          <Route path="/product/:id" element={<Product />} />
           <Route
             path="*"
             element={<h1>Not found 404 .....Not found 404...Not found 404</h1>}

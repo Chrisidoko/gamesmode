@@ -31,8 +31,17 @@
 
     // Card Title 
     .Card_text {
+        padding-top: 15px;
         cursor: pointer;
-        @include text_style(600, 14px, 19.6px, #f5f5f5);
+        @include text_style(600, 15px, 19.6px, #f5f5f5);
+    }
+
+
+    //genre row
+    .cat_row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     // Card Tag

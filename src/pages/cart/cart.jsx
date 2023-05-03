@@ -41,13 +41,20 @@ function Cart() {
           <div className="cartlist">
             {cart.cartItems?.map((cartItem) => (
               <div key={cartItem.id} className="cartitem">
-                <div className="cartphoto"></div>
+                <div
+                  className="cartphoto"
+                  style={{
+                    backgroundImage: `url(${cartItem.background_image})`,
+                  }}
+                ></div>
                 <div className="vertical">
                   <div className="topflex">
                     <div className="gerne">BASE GAME</div>
-                    <span className="price">${cartItem.albumId}</span>
+                    <span className="price">
+                      ${cartItem.reviews_text_count}
+                    </span>
                   </div>
-                  <span className="name">{cartItem.title}</span>
+                  <span className="name">{cartItem.name}</span>
                   <span className="sub">Self-Refundable</span>
                   <div className="bottomflex">
                     <div className="platforms">
@@ -77,7 +84,7 @@ function Cart() {
                 <span>Price</span> <span>${cart.cartTotalAmount}</span>
               </div>
               <div className="s_row">
-                <span>Sale Discount</span> <span>-$40.20</span>
+                <span>Sale Discount</span> <span>-$20.20</span>
               </div>
               <div className="s_row">
                 <span>Taxes</span>
@@ -87,7 +94,7 @@ function Cart() {
               <div className="s_row">
                 <span>Subtotal</span>
 
-                <span>${cart.cartTotalAmount - 1}</span>
+                <span>${cart.cartTotalAmount - 20.2}</span>
               </div>
               <button>
                 <span>Check Out</span>

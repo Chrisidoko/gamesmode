@@ -7,13 +7,13 @@ import { BrowserRouter } from "react-router-dom";
 import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
-import productsReducer, { productsFetch } from "./features/productsSlices";
+//import productsReducer, { productsFetch } from "./features/productsSlices";
 import cartReducer, { getTotals } from "./features/cartSlice";
 import { productsApi } from "./features/productsApi";
 
 const store = configureStore({
   reducer: {
-    products: productsReducer,
+    //products: productsReducer,
     cart: cartReducer,
     [productsApi.reducerPath]: productsApi.reducer,
   },
@@ -21,7 +21,7 @@ const store = configureStore({
     getDefaultMiddleware().concat(productsApi.middleware),
 });
 
-store.dispatch(productsFetch());
+//store.dispatch(productsFetch());
 store.dispatch(getTotals());
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
