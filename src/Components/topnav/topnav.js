@@ -55,7 +55,7 @@ function Topnav() {
         </ul>
 
         <div className="right">
-          <Link to="/downloads">
+          <Link to="/cart">
             <div className="icon2">
               <MdNotifications size={27} />
               {cartTotalQuantity > 0 && (

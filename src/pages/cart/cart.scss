@@ -100,8 +100,8 @@
             background-color: rgba(255, 255, 255, 0.1);
             border-radius: 4px;
             padding: 5px 10px;
-            min-width: 81px;
-            height: 25px;
+            //min-width: 81px;
+            // height: 25px;
             font-size: 9px;
             font-weight: 600;
             letter-spacing: 1px;
@@ -291,6 +291,15 @@
 
 // Responsive
 @media only screen and (max-width: 900px) {
+
+    .cartheader {
+
+        line-height: 30px;
+        font-size: 25px;
+        margin-top: 40px;
+
+    }
+
     .grid {
         display: flex;
         flex-direction: column;
@@ -308,6 +317,7 @@
 
     .s_container {
         width: 100%;
+        padding-right: 18px;
     }
 
     .vertical {
